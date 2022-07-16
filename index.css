@@ -5,6 +5,8 @@
     --light: #66fcf1;
     --dim: #45a29e;
     --gray: #6b7280;
+    --lightGreen: #24da91;
+    --darkGreen: #0cff0c;
 }
 
 *{
@@ -33,7 +35,6 @@ header h1{
     font-weight: 800;
     color: var(--light);
     margin-bottom: 1rem;
-
 }
 
 #to-do-form{
@@ -54,11 +55,98 @@ input, button {
     border-radius: 1rem;
     margin-right: 1rem;
     color: black;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 800;
 }
 
-/* #to-do-submit{
+#to-do-submit{
+    color: rgb(25, 245, 25);
+    font-size: 1.25rem;
+    font-weight: 1000;
+    background-image: linear-gradient(to right, var(--lightGreen),var(--darkGreen));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
 
-} */
+#to-do-submit:hover{
+    opacity: 0.8;
+}
 
+#to-do-submit:active{
+    opacity: 0.7;
+}
+
+main{
+    flex: 1 1 0%;
+    /* padding: 2rem 1rem; */
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.to-do-list{
+    padding: 1rem;
+}
+
+.to-do-list h2{
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--dim);
+    margin-bottom: 1rem;
+}
+
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#tasks .task .content .text{
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 500;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only){
+    color: yellow;
+}
+
+#tasks .task .actions{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions button{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    /* color: white; */
+    transition: 0.4s;
+}
+
+.task .actions button:hover{
+    opacity: 0.8;
+}
+
+.task .actions button:hover{
+    opacity: 0.7;
+}
+
+.task .actions .edit{
+    background-image: linear-gradient(to right, var(--lightGreen),var(--darkGreen));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete{
+    color: crimson;
+}
