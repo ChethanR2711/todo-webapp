@@ -1,0 +1,64 @@
+:root{
+    --darkest: #0b0c10;
+    --darker: #1f2833;
+    --dark: #c5c6c7;
+    --light: #66fcf1;
+    --dim: #45a29e;
+    --gray: #6b7280;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--darker);
+    color: #fff;
+}
+
+header{
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--light);
+    margin-bottom: 1rem;
+
+}
+
+#to-do-form{
+    display: flex;
+}
+
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#to-do-input{
+    flex: 1 1 0%;
+    background-color: var(--dark);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: black;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+/* #to-do-submit{
+
+} */
+
